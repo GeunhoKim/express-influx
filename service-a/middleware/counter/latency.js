@@ -1,7 +1,7 @@
 'use strict'
 
 const os = require('os');
-const influx = require('./influx.js');
+var influx = require('./influx.js');
 var onHeaders = require('on-headers');
 
 var host = os.hostname();
@@ -24,7 +24,7 @@ var latency = function (req, res, next) {
         try {
             influx.writePoints([
                 {
-                    measurement: 'service-a',
+                    measurement: 'serviceA',
                     tags: { host: host, url: url },
                     fields: { latency: timetaken }
                 }

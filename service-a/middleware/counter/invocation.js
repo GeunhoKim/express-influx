@@ -13,7 +13,7 @@ var invocation = function (req, res, next) {
     try {
         influx.writePoints([
             {
-                measurement: 'service-a',
+                measurement: 'serviceA',
                 tags: { host: host, url: url },
                 fields: { num_requests: 1 }
             }

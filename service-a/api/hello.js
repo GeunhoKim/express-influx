@@ -12,4 +12,12 @@ hello.get('/hello', function(req, res){
     res.json(result);
 });
 
+hello.get('/world', function(req, res){
+    var result = {
+        world: "Hello!"
+    };
+
+    res.json(result);
+});
+
 module.exports = hello;
